@@ -1,0 +1,15 @@
+# Guide
+
+guide: {
+  metrics: count: entity: 1
+  metrics: count: path: 1
+  metrics: count: method: 1
+
+  entity: get_ip_info: {
+    path: "/{ip}": {
+      rename: param: "ip": *"id"
+      op: load: method: *GET
+    }
+  }
+
+}

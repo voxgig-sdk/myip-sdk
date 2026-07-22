@@ -1,0 +1,61 @@
+{
+  "existing": {
+    "get_ip_info": {
+      "GET_IP_INFO00": {
+        "browser": "s64",
+        "country": "s65",
+        "country_code": "s66",
+        "hosting_info": {},
+        "ip": "s68",
+        "ipv4": "s69",
+        "ipv6": "s6a",
+        "location": {},
+        "organization": "s6c",
+        "os": "s6d",
+        "id": "GET_IP_INFO00"
+      },
+      "GET_IP_INFO01": {
+        "browser": "sc8",
+        "country": "sc9",
+        "country_code": "sca",
+        "hosting_info": {},
+        "ip": "scc",
+        "ipv4": "scd",
+        "ipv6": "sce",
+        "location": {},
+        "organization": "sd0",
+        "os": "sd1",
+        "id": "GET_IP_INFO01"
+      },
+      "GET_IP_INFO02": {
+        "browser": "s12c",
+        "country": "s12d",
+        "country_code": "s12e",
+        "hosting_info": {},
+        "ip": "s130",
+        "ipv4": "s131",
+        "ipv6": "s132",
+        "location": {},
+        "organization": "s134",
+        "os": "s135",
+        "id": "GET_IP_INFO02"
+      }
+    }
+  },
+  "new": {
+    "get_ip_info": {
+      "get_ip_info_ref01": {
+        "browser": "s190",
+        "country": "s191",
+        "country_code": "s192",
+        "hosting_info": {},
+        "ip": "s194",
+        "ipv4": "s195",
+        "ipv6": "s196",
+        "location": {},
+        "organization": "s198",
+        "os": "s199"
+      }
+    }
+  }
+}

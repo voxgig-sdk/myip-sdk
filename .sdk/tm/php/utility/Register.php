@@ -1,0 +1,67 @@
+<?php
+declare(strict_types=1);
+
+// Myip SDK utility registration
+
+require_once __DIR__ . '/../core/UtilityType.php';
+require_once __DIR__ . '/Clean.php';
+require_once __DIR__ . '/Done.php';
+require_once __DIR__ . '/MakeError.php';
+require_once __DIR__ . '/FeatureAdd.php';
+require_once __DIR__ . '/FeatureHook.php';
+require_once __DIR__ . '/FeatureInit.php';
+require_once __DIR__ . '/Fetcher.php';
+require_once __DIR__ . '/MakeFetchDef.php';
+require_once __DIR__ . '/MakeContext.php';
+require_once __DIR__ . '/MakeOptions.php';
+require_once __DIR__ . '/MakeRequest.php';
+require_once __DIR__ . '/MakeResponse.php';
+require_once __DIR__ . '/MakeResult.php';
+require_once __DIR__ . '/MakePoint.php';
+require_once __DIR__ . '/MakeSpec.php';
+require_once __DIR__ . '/MakeUrl.php';
+require_once __DIR__ . '/Param.php';
+require_once __DIR__ . '/PrepareAuth.php';
+require_once __DIR__ . '/PrepareBody.php';
+require_once __DIR__ . '/PrepareHeaders.php';
+require_once __DIR__ . '/PrepareMethod.php';
+require_once __DIR__ . '/PrepareParams.php';
+require_once __DIR__ . '/PreparePath.php';
+require_once __DIR__ . '/PrepareQuery.php';
+require_once __DIR__ . '/ResultBasic.php';
+require_once __DIR__ . '/ResultBody.php';
+require_once __DIR__ . '/ResultHeaders.php';
+require_once __DIR__ . '/TransformRequest.php';
+require_once __DIR__ . '/TransformResponse.php';
+
+MyipUtility::setRegistrar(function (MyipUtility $u): void {
+    $u->clean = [MyipClean::class, 'call'];
+    $u->done = [MyipDone::class, 'call'];
+    $u->make_error = [MyipMakeError::class, 'call'];
+    $u->feature_add = [MyipFeatureAdd::class, 'call'];
+    $u->feature_hook = [MyipFeatureHook::class, 'call'];
+    $u->feature_init = [MyipFeatureInit::class, 'call'];
+    $u->fetcher = [MyipFetcher::class, 'call'];
+    $u->make_fetch_def = [MyipMakeFetchDef::class, 'call'];
+    $u->make_context = [MyipMakeContext::class, 'call'];
+    $u->make_options = [MyipMakeOptions::class, 'call'];
+    $u->make_request = [MyipMakeRequest::class, 'call'];
+    $u->make_response = [MyipMakeResponse::class, 'call'];
+    $u->make_result = [MyipMakeResult::class, 'call'];
+    $u->make_point = [MyipMakePoint::class, 'call'];
+    $u->make_spec = [MyipMakeSpec::class, 'call'];
+    $u->make_url = [MyipMakeUrl::class, 'call'];
+    $u->param = [MyipParam::class, 'call'];
+    $u->prepare_auth = [MyipPrepareAuth::class, 'call'];
+    $u->prepare_body = [MyipPrepareBody::class, 'call'];
+    $u->prepare_headers = [MyipPrepareHeaders::class, 'call'];
+    $u->prepare_method = [MyipPrepareMethod::class, 'call'];
+    $u->prepare_params = [MyipPrepareParams::class, 'call'];
+    $u->prepare_path = [MyipPreparePath::class, 'call'];
+    $u->prepare_query = [MyipPrepareQuery::class, 'call'];
+    $u->result_basic = [MyipResultBasic::class, 'call'];
+    $u->result_body = [MyipResultBody::class, 'call'];
+    $u->result_headers = [MyipResultHeaders::class, 'call'];
+    $u->transform_request = [MyipTransformRequest::class, 'call'];
+    $u->transform_response = [MyipTransformResponse::class, 'call'];
+});

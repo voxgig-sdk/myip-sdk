@@ -1,0 +1,104 @@
+# Entity: get_ip_info
+
+main: kit: entity: get_ip_info: {
+
+  alias: field: {}
+
+  fields: [
+    {
+      name: "browser"
+      req: false
+      type: "`$STRING`"
+    }
+    {
+      name: "country"
+      req: false
+      type: "`$STRING`"
+    }
+    {
+      name: "country_code"
+      req: false
+      type: "`$STRING`"
+    }
+    {
+      name: "hosting_info"
+      req: false
+      type: "`$OBJECT`"
+    }
+    {
+      name: "ip"
+      req: false
+      type: "`$STRING`"
+    }
+    {
+      name: "ipv4"
+      req: false
+      type: "`$STRING`"
+    }
+    {
+      name: "ipv6"
+      req: false
+      type: "`$STRING`"
+    }
+    {
+      name: "location"
+      req: false
+      type: "`$OBJECT`"
+    }
+    {
+      name: "organization"
+      req: false
+      type: "`$STRING`"
+    }
+    {
+      name: "os"
+      req: false
+      type: "`$STRING`"
+    }
+  ]
+
+  name: "get_ip_info"
+  op: {
+    load: {
+      name: "load"
+      points: [
+        {
+          args: {
+            params: [
+              {
+                example: "217.199.217.100"
+                kind: "param"
+                name: "id"
+                orig: "ip"
+                reqd: true
+                type: "`$STRING`"
+              }
+            ]
+          }
+          method: "GET"
+          orig: "/{ip}"
+          parts: [
+            "{id}"
+          ]
+          rename: {
+            param: {
+              ip: "id"
+            }
+          }
+          select: {
+            exist: [
+              "id"
+            ]
+          }
+          transform: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

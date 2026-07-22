@@ -1,0 +1,25 @@
+# API Information
+
+
+main: {
+  kit: {
+    info: {
+      auth: false
+      contact: {
+        url: "https://github.com/l0v3m0n3y/myip"
+      }
+      description: "The MyIP API provides detailed information about your IP address, including IPv4 and IPv6, operating system, browser, organization, and country on an interactive map. It also offers live hosting information about websites across the internet."
+      servers: [
+        {
+          description: "MyIP API Server"
+          url: "https://api.myip.ms"
+        }
+      ]
+      summary: "The MyIP API provides detailed information about your IP address, including IPv4 and IPv6, operating system, browser, organization, and country on an interactive map."
+      title: "MyIP API"
+      version: "1.0.0"
+      website: "https://myip.ms"
+    }
+  }
+}
+

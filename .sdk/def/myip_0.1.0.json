@@ -1,0 +1,191 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "MyIP API",
+    "description": "The MyIP API provides detailed information about your IP address, including IPv4 and IPv6, operating system, browser, organization, and country on an interactive map. It also offers live hosting information about websites across the internet.",
+    "version": "1.0.0",
+    "contact": {
+      "url": "https://github.com/l0v3m0n3y/myip"
+    }
+  },
+  "servers": [
+    {
+      "url": "https://api.myip.ms",
+      "description": "MyIP API Server"
+    }
+  ],
+  "paths": {
+    "/{ip}": {
+      "get": {
+        "summary": "Get IP Information",
+        "description": "Retrieves detailed information about a specific IP address, including IPv4 & IPv6, operating system, browser, organization, country on interactive map, and live hosting information.",
+        "operationId": "getIpInfo",
+        "parameters": [
+          {
+            "name": "ip",
+            "in": "path",
+            "description": "The IP address to lookup (IPv4 or IPv6)",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "example": "217.199.217.100"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response with IP information",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "ip": {
+                      "type": "string",
+                      "description": "The queried IP address",
+                      "example": "217.199.217.100"
+                    },
+                    "ipv4": {
+                      "type": "string",
+                      "description": "IPv4 address",
+                      "example": "217.199.217.100"
+                    },
+                    "ipv6": {
+                      "type": "string",
+                      "description": "IPv6 address if available",
+                      "nullable": true
+                    },
+                    "os": {
+                      "type": "string",
+                      "description": "Detected operating system",
+                      "example": "Windows"
+                    },
+                    "browser": {
+                      "type": "string",
+                      "description": "Detected browser",
+                      "example": "Chrome"
+                    },
+                    "organization": {
+                      "type": "string",
+                      "description": "Organization associated with the IP",
+                      "example": "Example ISP"
+                    },
+                    "country": {
+                      "type": "string",
+                      "description": "Country where the IP is located",
+                      "example": "United States"
+                    },
+                    "country_code": {
+                      "type": "string",
+                      "description": "ISO country code",
+                      "example": "US"
+                    },
+                    "location": {
+                      "type": "object",
+                      "description": "Geographic location information",
+                      "properties": {
+                        "latitude": {
+                          "type": "number",
+                          "format": "double",
+                          "description": "Latitude coordinate"
+                        },
+                        "longitude": {
+                          "type": "number",
+                          "format": "double",
+                          "description": "Longitude coordinate"
+                        },
+                        "city": {
+                          "type": "string",
+                          "description": "City name"
+                        },
+                        "region": {
+                          "type": "string",
+                          "description": "Region or state"
+                        }
+                      }
+                    },
+                    "hosting_info": {
+                      "type": "object",
+                      "description": "Live hosting information",
+                      "properties": {
+                        "isp": {
+                          "type": "string",
+                          "description": "Internet Service Provider"
+                        },
+                        "asn": {
+                          "type": "string",
+                          "description": "Autonomous System Number"
+                        },
+                        "host": {
+                          "type": "string",
+                          "description": "Hostname"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request - Invalid IP address format",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "string",
+                      "example": "Invalid IP address format"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "IP address not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "string",
+                      "example": "IP address not found"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal server error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "string",
+                      "example": "Internal server error"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "IP Information"
+        ]
+      }
+    }
+  },
+  "tags": [
+    {
+      "name": "IP Information",
+      "description": "Operations for retrieving IP address information"
+    }
+  ]
+}
