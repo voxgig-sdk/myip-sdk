@@ -3,9 +3,9 @@
 import json
 import pytest
 
-from utility.voxgig_struct import voxgig_struct as vs
+from myip_sdk.utility.voxgig_struct import voxgig_struct as vs
 from myip_sdk import MyipSDK
-from core import helpers
+from myip_sdk.core import helpers
 from test import runner
 
 

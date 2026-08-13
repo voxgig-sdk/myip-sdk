@@ -34,7 +34,7 @@ client = MyipSDK.new
 
 ```ruby
 begin
-  # load returns the bare GetIpInfo record (raises on error).
+  # load returns the ENTITY — call data_get for the GetIpInfo record (raises on error).
   getipinfo = client.GetIpInfo.load({ "id" => "example_id" })
   puts getipinfo
 rescue => err
@@ -120,7 +120,8 @@ client = MyipSDK.test({
   "entity" => { "getipinfo" => { "test01" => { "id" => "test01" } } },
 })
 
-# Entity ops return the bare mock record (raises on error).
+# Entity ops return the ENTITY (raises on error);
+# call data_get for the mock record.
 getipinfo = client.GetIpInfo.load({ "id" => "test01" })
 puts getipinfo
 ```
@@ -285,7 +286,7 @@ Create an instance: `get_ip_info = client.GetIpInfo`
 #### Example: Load
 
 ```ruby
-# load returns the bare GetIpInfo record (raises on error).
+# load returns the ENTITY — call data_get for the GetIpInfo record (raises on error).
 get_ip_info = client.GetIpInfo.load({ "id" => "get_ip_info_id" })
 ```
 

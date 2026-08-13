@@ -23,7 +23,7 @@ support (`load`):
 
 ```ts
 const client = new MyipSDK()
-const getipinfo = await client.GetIpInfo().load()
+const getipinfo = await client.GetIpInfo().load({ id: "example_id" })
 ```
 
 Thinking in entities keeps the mental model small — for people and AI agents alike —
@@ -38,9 +38,18 @@ network, and no credentials:
 ### TypeScript
 
 ```ts
-const client = MyipSDK.test()
+// The offline mock starts EMPTY — seed it with the records the test needs.
+// Shape: { entity: { <entity-name>: { <id>: <record> } } }
+const client = MyipSDK.test({
+  entity: {
+    get_ip_info: {
+      test01: { id: 'test01' },
+    },
+  },
+})
 const getipinfo = await client.GetIpInfo().load({ id: 'test01' })
-// getipinfo is a bare GetIpInfo populated with mock data
+// getipinfo is the GetIpInfo entity, populated with mock data
+// — call getipinfo.data() for the record itself
 console.log(getipinfo)
 ```
 
@@ -182,7 +191,7 @@ require_once 'myip_sdk.php';
 $client = new MyipSDK();
 
 
-// Load a specific getipinfo (returns the bare record; throws on error)
+// Load a specific getipinfo (returns the ENTITY; call data_get() for the record; throws on error)
 $getipinfo = $client->GetIpInfo()->load(["id" => "example_id"]);
 print_r($getipinfo);
 ```
@@ -210,7 +219,7 @@ require_relative "Myip_sdk"
 client = MyipSDK.new
 
 
-# Load a specific getipinfo (returns the bare record; raises on error)
+# Load a specific getipinfo (returns the ENTITY; call data_get for the record)
 getipinfo = client.GetIpInfo.load({ "id" => "example_id" })
 puts getipinfo
 ```
@@ -344,6 +353,9 @@ Pass custom features via the `extend` option at construction time.
 
 This SDK is generated from the upstream OpenAPI specification. It is an
 unofficial client and is not affiliated with the API provider.
+
+The OpenAPI spec(s) this SDK was generated from are kept in the
+[`.sdk/def/`](.sdk/def/) folder.
 
 - Upstream API: [https://github.com/l0v3m0n3y/myip](https://github.com/l0v3m0n3y/myip)
 

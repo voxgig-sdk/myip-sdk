@@ -123,6 +123,7 @@ class MyipConfig
                       ],
                     ],
                   ],
+                  'kind' => 'http',
                   'method' => 'GET',
                   'orig' => '/{ip}',
                   'parts' => [

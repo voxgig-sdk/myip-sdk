@@ -24,6 +24,7 @@ require_relative 'prepare_method'
 require_relative 'prepare_params'
 require_relative 'prepare_path'
 require_relative 'prepare_query'
+require_relative 'graphql'
 require_relative 'result_basic'
 require_relative 'result_body'
 require_relative 'result_headers'
@@ -55,6 +56,8 @@ MyipUtility.registrar = ->(u) {
   u.prepare_params = MyipUtilities::PrepareParams
   u.prepare_path = MyipUtilities::PreparePath
   u.prepare_query = MyipUtilities::PrepareQuery
+  u.graphql_body = MyipUtilities::GraphqlBody
+  u.graphql_errors = MyipUtilities::GraphqlErrors
   u.result_basic = MyipUtilities::ResultBasic
   u.result_body = MyipUtilities::ResultBody
   u.result_headers = MyipUtilities::ResultHeaders

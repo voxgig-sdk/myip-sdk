@@ -35,7 +35,7 @@ $client = new MyipSDK();
 
 ```php
 try {
-    // load() returns the bare GetIpInfo record (throws on error).
+    // load() returns the ENTITY — call data_get() for the GetIpInfo record (throws on error).
     $getipinfo = $client->GetIpInfo()->load(["id" => "example_id"]);
     print_r($getipinfo);
 } catch (\Throwable $err) {
@@ -126,7 +126,8 @@ $client = MyipSDK::test([
     "entity" => ["getipinfo" => ["test01" => ["id" => "test01"]]],
 ]);
 
-// Entity ops return the bare mock record (throws on error).
+// Entity ops return the ENTITY (throws on error);
+// call data_get() for the mock record.
 $getipinfo = $client->GetIpInfo()->load(["id" => "test01"]);
 print_r($getipinfo);
 ```
@@ -225,7 +226,7 @@ All entities share the same interface.
 
 ### Result shape
 
-Entity operations return the bare result data (an `array` for single-entity
+Entity operations return the ENTITY (call data_get() for the record) (an `array` for single-entity
 ops, a `list` for `list`) and throw on error. Wrap calls in
 `try`/`catch` to handle failures.
 
@@ -295,7 +296,7 @@ Create an instance: `$get_ip_info = $client->GetIpInfo();`
 #### Example: Load
 
 ```php
-// load() returns the bare GetIpInfo record (throws on error).
+// load() returns the ENTITY — call data_get() for the GetIpInfo record (throws on error).
 $get_ip_info = $client->GetIpInfo()->load(["id" => "get_ip_info_id"]);
 ```
 
