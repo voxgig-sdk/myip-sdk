@@ -15,7 +15,7 @@ require_relative "../Myip_sdk"
 module MyipFeatureHarness
   # True when this SDK was generated with the named feature.
   def self.has_feature?(name)
-    f = MyipConfig.make_config["feature"]
+    f = MyipConfig.shared_config["feature"]
     f.is_a?(Hash) && !f[name].nil?
   end
 

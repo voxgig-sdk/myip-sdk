@@ -28,7 +28,7 @@ class MyipSDK
     utility = MyipUtility.new
     @_utility = utility
 
-    config = MyipConfig.make_config
+    config = MyipConfig.shared_config
 
     @_rootctx = utility.make_context.call({
       "client" => self,
