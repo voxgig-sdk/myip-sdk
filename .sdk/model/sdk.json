@@ -36,60 +36,70 @@
               "active": true,
               "name": "browser",
               "req": false,
+              "short": "Detected browser",
               "type": "`$STRING`"
             },
             {
               "active": true,
               "name": "country",
               "req": false,
+              "short": "Country where the IP is located",
               "type": "`$STRING`"
             },
             {
               "active": true,
               "name": "country_code",
               "req": false,
+              "short": "ISO country code",
               "type": "`$STRING`"
             },
             {
               "active": true,
               "name": "hosting_info",
               "req": false,
+              "short": "Live hosting information",
               "type": "`$OBJECT`"
             },
             {
               "active": true,
               "name": "ip",
               "req": false,
+              "short": "The queried IP address",
               "type": "`$STRING`"
             },
             {
               "active": true,
               "name": "ipv4",
               "req": false,
+              "short": "IPv4 address",
               "type": "`$STRING`"
             },
             {
               "active": true,
               "name": "ipv6",
               "req": false,
+              "short": "IPv6 address if available",
               "type": "`$STRING`"
             },
             {
               "active": true,
               "name": "location",
               "req": false,
+              "short": "Geographic location information",
               "type": "`$OBJECT`"
             },
             {
               "active": true,
               "name": "organization",
               "req": false,
+              "short": "Organization associated with the IP",
               "type": "`$STRING`"
             },
             {
               "active": true,
               "name": "os",
               "req": false,
+              "short": "Detected operating system",
               "type": "`$STRING`"
             }
           ],

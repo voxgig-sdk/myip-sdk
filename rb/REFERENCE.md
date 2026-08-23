@@ -93,16 +93,16 @@ get_ip_info = client.GetIpInfo
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `browser` | `String` | No |  |
-| `country` | `String` | No |  |
-| `country_code` | `String` | No |  |
-| `hosting_info` | `Hash` | No |  |
-| `ip` | `String` | No |  |
-| `ipv4` | `String` | No |  |
-| `ipv6` | `String` | No |  |
-| `location` | `Hash` | No |  |
-| `organization` | `String` | No |  |
-| `os` | `String` | No |  |
+| `browser` | `String` | No | Detected browser |
+| `country` | `String` | No | Country where the IP is located |
+| `country_code` | `String` | No | ISO country code |
+| `hosting_info` | `Hash` | No | Live hosting information |
+| `ip` | `String` | No | The queried IP address |
+| `ipv4` | `String` | No | IPv4 address |
+| `ipv6` | `String` | No | IPv6 address if available |
+| `location` | `Hash` | No | Geographic location information |
+| `organization` | `String` | No | Organization associated with the IP |
+| `os` | `String` | No | Detected operating system |
 
 ### Operations
 

@@ -225,16 +225,16 @@ Only `direct()` returns a response envelope — a `table` with `ok`,
 
 | Field | Description |
 | --- | --- |
-| `browser` |  |
-| `country` |  |
-| `country_code` |  |
-| `hosting_info` |  |
-| `ip` |  |
-| `ipv4` |  |
-| `ipv6` |  |
-| `location` |  |
-| `organization` |  |
-| `os` |  |
+| `browser` | Detected browser |
+| `country` | Country where the IP is located |
+| `country_code` | ISO country code |
+| `hosting_info` | Live hosting information |
+| `ip` | The queried IP address |
+| `ipv4` | IPv4 address |
+| `ipv6` | IPv6 address if available |
+| `location` | Geographic location information |
+| `organization` | Organization associated with the IP |
+| `os` | Detected operating system |
 
 Operations: Load.
 
@@ -259,16 +259,16 @@ Create an instance: `local get_ip_info = client:GetIpInfo(nil)`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `browser` | `string` |  |
-| `country` | `string` |  |
-| `country_code` | `string` |  |
-| `hosting_info` | `table` |  |
-| `ip` | `string` |  |
-| `ipv4` | `string` |  |
-| `ipv6` | `string` |  |
-| `location` | `table` |  |
-| `organization` | `string` |  |
-| `os` | `string` |  |
+| `browser` | `string` | Detected browser |
+| `country` | `string` | Country where the IP is located |
+| `country_code` | `string` | ISO country code |
+| `hosting_info` | `table` | Live hosting information |
+| `ip` | `string` | The queried IP address |
+| `ipv4` | `string` | IPv4 address |
+| `ipv6` | `string` | IPv6 address if available |
+| `location` | `table` | Geographic location information |
+| `organization` | `string` | Organization associated with the IP |
+| `os` | `string` | Detected operating system |
 
 #### Example: Load
 

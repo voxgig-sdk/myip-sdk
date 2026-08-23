@@ -238,16 +238,16 @@ returns a result `Hash` with these keys:
 
 | Field | Description |
 | --- | --- |
-| `browser` |  |
-| `country` |  |
-| `country_code` |  |
-| `hosting_info` |  |
-| `ip` |  |
-| `ipv4` |  |
-| `ipv6` |  |
-| `location` |  |
-| `organization` |  |
-| `os` |  |
+| `browser` | Detected browser |
+| `country` | Country where the IP is located |
+| `country_code` | ISO country code |
+| `hosting_info` | Live hosting information |
+| `ip` | The queried IP address |
+| `ipv4` | IPv4 address |
+| `ipv6` | IPv6 address if available |
+| `location` | Geographic location information |
+| `organization` | Organization associated with the IP |
+| `os` | Detected operating system |
 
 Operations: Load.
 
@@ -272,16 +272,16 @@ Create an instance: `get_ip_info = client.GetIpInfo`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `browser` | `String` |  |
-| `country` | `String` |  |
-| `country_code` | `String` |  |
-| `hosting_info` | `Hash` |  |
-| `ip` | `String` |  |
-| `ipv4` | `String` |  |
-| `ipv6` | `String` |  |
-| `location` | `Hash` |  |
-| `organization` | `String` |  |
-| `os` | `String` |  |
+| `browser` | `String` | Detected browser |
+| `country` | `String` | Country where the IP is located |
+| `country_code` | `String` | ISO country code |
+| `hosting_info` | `Hash` | Live hosting information |
+| `ip` | `String` | The queried IP address |
+| `ipv4` | `String` | IPv4 address |
+| `ipv6` | `String` | IPv6 address if available |
+| `location` | `Hash` | Geographic location information |
+| `organization` | `String` | Organization associated with the IP |
+| `os` | `String` | Detected operating system |
 
 #### Example: Load
 

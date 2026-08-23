@@ -87,16 +87,16 @@ get_ip_info = client.GetIpInfo()
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `browser` | `str` | No |  |
-| `country` | `str` | No |  |
-| `country_code` | `str` | No |  |
-| `hosting_info` | `dict` | No |  |
-| `ip` | `str` | No |  |
-| `ipv4` | `str` | No |  |
-| `ipv6` | `str` | No |  |
-| `location` | `dict` | No |  |
-| `organization` | `str` | No |  |
-| `os` | `str` | No |  |
+| `browser` | `str` | No | Detected browser |
+| `country` | `str` | No | Country where the IP is located |
+| `country_code` | `str` | No | ISO country code |
+| `hosting_info` | `dict` | No | Live hosting information |
+| `ip` | `str` | No | The queried IP address |
+| `ipv4` | `str` | No | IPv4 address |
+| `ipv6` | `str` | No | IPv6 address if available |
+| `location` | `dict` | No | Geographic location information |
+| `organization` | `str` | No | Organization associated with the IP |
+| `os` | `str` | No | Detected operating system |
 
 ### Operations
 

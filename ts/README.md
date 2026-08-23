@@ -9,7 +9,7 @@ The API is exposed as capitalised, semantic **Entities** — e.g.
 instead of raw URL paths and query parameters. This keeps the surface
 predictable and low-friction for both humans and AI agents.
 
-> Other languages, the CLI, and MCP server live alongside this one — see
+> Also generated from this model: `go`, `go-cli`, `go-mcp`, `lua`, `php`, `py`, `rb` — see
 > the [top-level README](../README.md).
 
 
@@ -285,16 +285,16 @@ The `prepare()` method returns:
 
 | Field | Description |
 | --- | --- |
-| `browser` |  |
-| `country` |  |
-| `country_code` |  |
-| `hosting_info` |  |
-| `ip` |  |
-| `ipv4` |  |
-| `ipv6` |  |
-| `location` |  |
-| `organization` |  |
-| `os` |  |
+| `browser` | Detected browser |
+| `country` | Country where the IP is located |
+| `country_code` | ISO country code |
+| `hosting_info` | Live hosting information |
+| `ip` | The queried IP address |
+| `ipv4` | IPv4 address |
+| `ipv6` | IPv6 address if available |
+| `location` | Geographic location information |
+| `organization` | Organization associated with the IP |
+| `os` | Detected operating system |
 
 Operations: load.
 
@@ -319,16 +319,16 @@ Create an instance: `const get_ip_info = client.GetIpInfo()`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `browser` | `string` |  |
-| `country` | `string` |  |
-| `country_code` | `string` |  |
-| `hosting_info` | `Record<string, any>` |  |
-| `ip` | `string` |  |
-| `ipv4` | `string` |  |
-| `ipv6` | `string` |  |
-| `location` | `Record<string, any>` |  |
-| `organization` | `string` |  |
-| `os` | `string` |  |
+| `browser` | `string` | Detected browser |
+| `country` | `string` | Country where the IP is located |
+| `country_code` | `string` | ISO country code |
+| `hosting_info` | `Record<string, any>` | Live hosting information |
+| `ip` | `string` | The queried IP address |
+| `ipv4` | `string` | IPv4 address |
+| `ipv6` | `string` | IPv6 address if available |
+| `location` | `Record<string, any>` | Geographic location information |
+| `organization` | `string` | Organization associated with the IP |
+| `os` | `string` | Detected operating system |
 
 #### Example: Load
 

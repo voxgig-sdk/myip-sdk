@@ -11,6 +11,9 @@ func MakeConfig() map[string]any {
 	return map[string]any{
 		"main": map[string]any{
 			"name": "Myip",
+			"slug": "myip",
+			"version": "0.0.1",
+			"target": "go",
 		},
 		"feature": map[string]any{
 			"test": map[string]any{
@@ -33,42 +36,52 @@ func MakeConfig() map[string]any {
 				"fields": []any{
 					map[string]any{
 						"name": "browser",
+						"short": "Detected browser",
 						"type": "`$STRING`",
 					},
 					map[string]any{
 						"name": "country",
+						"short": "Country where the IP is located",
 						"type": "`$STRING`",
 					},
 					map[string]any{
 						"name": "country_code",
+						"short": "ISO country code",
 						"type": "`$STRING`",
 					},
 					map[string]any{
 						"name": "hosting_info",
+						"short": "Live hosting information",
 						"type": "`$OBJECT`",
 					},
 					map[string]any{
 						"name": "ip",
+						"short": "The queried IP address",
 						"type": "`$STRING`",
 					},
 					map[string]any{
 						"name": "ipv4",
+						"short": "IPv4 address",
 						"type": "`$STRING`",
 					},
 					map[string]any{
 						"name": "ipv6",
+						"short": "IPv6 address if available",
 						"type": "`$STRING`",
 					},
 					map[string]any{
 						"name": "location",
+						"short": "Geographic location information",
 						"type": "`$OBJECT`",
 					},
 					map[string]any{
 						"name": "organization",
+						"short": "Organization associated with the IP",
 						"type": "`$STRING`",
 					},
 					map[string]any{
 						"name": "os",
+						"short": "Detected operating system",
 						"type": "`$STRING`",
 					},
 				},

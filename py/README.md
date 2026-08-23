@@ -241,16 +241,16 @@ On error, `ok` is `False` and `err` contains the error value.
 
 | Field | Description |
 | --- | --- |
-| `browser` |  |
-| `country` |  |
-| `country_code` |  |
-| `hosting_info` |  |
-| `ip` |  |
-| `ipv4` |  |
-| `ipv6` |  |
-| `location` |  |
-| `organization` |  |
-| `os` |  |
+| `browser` | Detected browser |
+| `country` | Country where the IP is located |
+| `country_code` | ISO country code |
+| `hosting_info` | Live hosting information |
+| `ip` | The queried IP address |
+| `ipv4` | IPv4 address |
+| `ipv6` | IPv6 address if available |
+| `location` | Geographic location information |
+| `organization` | Organization associated with the IP |
+| `os` | Detected operating system |
 
 Operations: Load.
 
@@ -275,16 +275,16 @@ Create an instance: `get_ip_info = client.GetIpInfo()`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `browser` | `str` |  |
-| `country` | `str` |  |
-| `country_code` | `str` |  |
-| `hosting_info` | `dict` |  |
-| `ip` | `str` |  |
-| `ipv4` | `str` |  |
-| `ipv6` | `str` |  |
-| `location` | `dict` |  |
-| `organization` | `str` |  |
-| `os` | `str` |  |
+| `browser` | `str` | Detected browser |
+| `country` | `str` | Country where the IP is located |
+| `country_code` | `str` | ISO country code |
+| `hosting_info` | `dict` | Live hosting information |
+| `ip` | `str` | The queried IP address |
+| `ipv4` | `str` | IPv4 address |
+| `ipv6` | `str` | IPv6 address if available |
+| `location` | `dict` | Geographic location information |
+| `organization` | `str` | Organization associated with the IP |
+| `os` | `str` | Detected operating system |
 
 #### Example: Load
 

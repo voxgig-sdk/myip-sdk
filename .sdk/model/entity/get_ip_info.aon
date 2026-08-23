@@ -8,51 +8,61 @@ main: kit: entity: get_ip_info: {
     {
       name: "browser"
       req: false
+      short: "Detected browser"
       type: "`$STRING`"
     }
     {
       name: "country"
       req: false
+      short: "Country where the IP is located"
       type: "`$STRING`"
     }
     {
       name: "country_code"
       req: false
+      short: "ISO country code"
       type: "`$STRING`"
     }
     {
       name: "hosting_info"
       req: false
+      short: "Live hosting information"
       type: "`$OBJECT`"
     }
     {
       name: "ip"
       req: false
+      short: "The queried IP address"
       type: "`$STRING`"
     }
     {
       name: "ipv4"
       req: false
+      short: "IPv4 address"
       type: "`$STRING`"
     }
     {
       name: "ipv6"
       req: false
+      short: "IPv6 address if available"
       type: "`$STRING`"
     }
     {
       name: "location"
       req: false
+      short: "Geographic location information"
       type: "`$OBJECT`"
     }
     {
       name: "organization"
       req: false
+      short: "Organization associated with the IP"
       type: "`$STRING`"
     }
     {
       name: "os"
       req: false
+      short: "Detected operating system"
       type: "`$STRING`"
     }
   ]

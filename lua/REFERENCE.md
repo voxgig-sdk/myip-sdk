@@ -90,16 +90,16 @@ local get_ip_info = client:GetIpInfo(nil)
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `browser` | `string` | No |  |
-| `country` | `string` | No |  |
-| `country_code` | `string` | No |  |
-| `hosting_info` | `table` | No |  |
-| `ip` | `string` | No |  |
-| `ipv4` | `string` | No |  |
-| `ipv6` | `string` | No |  |
-| `location` | `table` | No |  |
-| `organization` | `string` | No |  |
-| `os` | `string` | No |  |
+| `browser` | `string` | No | Detected browser |
+| `country` | `string` | No | Country where the IP is located |
+| `country_code` | `string` | No | ISO country code |
+| `hosting_info` | `table` | No | Live hosting information |
+| `ip` | `string` | No | The queried IP address |
+| `ipv4` | `string` | No | IPv4 address |
+| `ipv6` | `string` | No | IPv6 address if available |
+| `location` | `table` | No | Geographic location information |
+| `organization` | `string` | No | Organization associated with the IP |
+| `os` | `string` | No | Detected operating system |
 
 ### Operations
 
