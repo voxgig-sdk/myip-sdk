@@ -11,6 +11,7 @@
 ---@field country? string
 ---@field country_code? string
 ---@field hosting_info? table
+---@field id? string
 ---@field ip? string
 ---@field ipv4? string
 ---@field ipv6? string

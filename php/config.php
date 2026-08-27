@@ -42,6 +42,7 @@ class MyipConfig
           'options' => [
             'active' => false,
           ],
+          'transport' => 'base',
         ],
             ],
             "options" => [
@@ -75,6 +76,10 @@ class MyipConfig
               'name' => 'hosting_info',
               'short' => 'Live hosting information',
               'type' => '`$OBJECT`',
+            ],
+            [
+              'name' => 'id',
+              'type' => '`$STRING`',
             ],
             [
               'name' => 'ip',

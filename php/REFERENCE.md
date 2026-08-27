@@ -96,6 +96,7 @@ $get_ip_info = $client->GetIpInfo();
 | `country` | `string` | No | Country where the IP is located |
 | `country_code` | `string` | No | ISO country code |
 | `hosting_info` | `array` | No | Live hosting information |
+| `id` | `string` | No |  |
 | `ip` | `string` | No | The queried IP address |
 | `ipv4` | `string` | No | IPv4 address |
 | `ipv6` | `string` | No | IPv6 address if available |

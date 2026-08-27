@@ -22,6 +22,9 @@
 # @!attribute [rw] hosting_info
 #   @return [Hash, nil]
 #
+# @!attribute [rw] id
+#   @return [String, nil]
+#
 # @!attribute [rw] ip
 #   @return [String, nil]
 #
@@ -44,6 +47,7 @@ GetIpInfo = Struct.new(
   :country,
   :country_code,
   :hosting_info,
+  :id,
   :ip,
   :ipv4,
   :ipv6,

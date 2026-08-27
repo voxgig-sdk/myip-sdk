@@ -21,6 +21,7 @@ class GetIpInfo(TypedDict, total=False):
     country: str
     country_code: str
     hosting_info: dict
+    id: str
     ip: str
     ipv4: str
     ipv6: str

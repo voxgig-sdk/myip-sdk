@@ -252,6 +252,7 @@ On error, `ok` is `false` and `$err` contains the error value.
 | `country` | Country where the IP is located |
 | `country_code` | ISO country code |
 | `hosting_info` | Live hosting information |
+| `id` |  |
 | `ip` | The queried IP address |
 | `ipv4` | IPv4 address |
 | `ipv6` | IPv6 address if available |
@@ -286,6 +287,7 @@ Create an instance: `$get_ip_info = $client->GetIpInfo();`
 | `country` | `string` | Country where the IP is located |
 | `country_code` | `string` | ISO country code |
 | `hosting_info` | `array` | Live hosting information |
+| `id` | `string` |  |
 | `ip` | `string` | The queried IP address |
 | `ipv4` | `string` | IPv4 address |
 | `ipv6` | `string` | IPv6 address if available |

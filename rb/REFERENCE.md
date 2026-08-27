@@ -97,6 +97,7 @@ get_ip_info = client.GetIpInfo
 | `country` | `String` | No | Country where the IP is located |
 | `country_code` | `String` | No | ISO country code |
 | `hosting_info` | `Hash` | No | Live hosting information |
+| `id` | `String` | No |  |
 | `ip` | `String` | No | The queried IP address |
 | `ipv4` | `String` | No | IPv4 address |
 | `ipv6` | `String` | No | IPv6 address if available |

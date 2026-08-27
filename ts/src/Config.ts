@@ -40,7 +40,8 @@ class Config {
      test:     {
       "options": {
         "active": false
-      }
+      },
+      "transport": "base"
     },
 
   }
@@ -84,6 +85,10 @@ class Config {
           "name": "hosting_info",
           "short": "Live hosting information",
           "type": "`$OBJECT`"
+        },
+        {
+          "name": "id",
+          "type": "`$STRING`"
         },
         {
           "name": "ip",

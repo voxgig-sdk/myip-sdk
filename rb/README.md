@@ -242,6 +242,7 @@ returns a result `Hash` with these keys:
 | `country` | Country where the IP is located |
 | `country_code` | ISO country code |
 | `hosting_info` | Live hosting information |
+| `id` |  |
 | `ip` | The queried IP address |
 | `ipv4` | IPv4 address |
 | `ipv6` | IPv6 address if available |
@@ -276,6 +277,7 @@ Create an instance: `get_ip_info = client.GetIpInfo`
 | `country` | `String` | Country where the IP is located |
 | `country_code` | `String` | ISO country code |
 | `hosting_info` | `Hash` | Live hosting information |
+| `id` | `String` |  |
 | `ip` | `String` | The queried IP address |
 | `ipv4` | `String` | IPv4 address |
 | `ipv6` | `String` | IPv6 address if available |

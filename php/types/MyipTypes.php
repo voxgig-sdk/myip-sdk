@@ -19,6 +19,7 @@ class GetIpInfo
     public ?string $country = null;
     public ?string $country_code = null;
     public ?array $hosting_info = null;
+    public ?string $id = null;
     public ?string $ip = null;
     public ?string $ipv4 = null;
     public ?string $ipv6 = null;

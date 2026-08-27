@@ -10,6 +10,7 @@ export interface GetIpInfo {
   country?: string
   country_code?: string
   hosting_info?: Record<string, any>
+  id?: string
   ip?: string
   ipv4?: string
   ipv6?: string

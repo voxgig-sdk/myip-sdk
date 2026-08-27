@@ -28,6 +28,7 @@ module MyipConfig
           "options" => {
             "active" => false,
           },
+          "transport" => "base",
         },
       },
       "options" => {
@@ -61,6 +62,10 @@ module MyipConfig
               "name" => "hosting_info",
               "short" => "Live hosting information",
               "type" => "`$OBJECT`",
+            },
+            {
+              "name" => "id",
+              "type" => "`$STRING`",
             },
             {
               "name" => "ip",

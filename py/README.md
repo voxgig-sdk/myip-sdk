@@ -245,6 +245,7 @@ On error, `ok` is `False` and `err` contains the error value.
 | `country` | Country where the IP is located |
 | `country_code` | ISO country code |
 | `hosting_info` | Live hosting information |
+| `id` |  |
 | `ip` | The queried IP address |
 | `ipv4` | IPv4 address |
 | `ipv6` | IPv6 address if available |
@@ -279,6 +280,7 @@ Create an instance: `get_ip_info = client.GetIpInfo()`
 | `country` | `str` | Country where the IP is located |
 | `country_code` | `str` | ISO country code |
 | `hosting_info` | `dict` | Live hosting information |
+| `id` | `str` |  |
 | `ip` | `str` | The queried IP address |
 | `ipv4` | `str` | IPv4 address |
 | `ipv6` | `str` | IPv6 address if available |

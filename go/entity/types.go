@@ -18,6 +18,7 @@ type GetIpInfo struct {
 	Country *string `json:"country,omitempty"`
 	CountryCode *string `json:"country_code,omitempty"`
 	HostingInfo *map[string]any `json:"hosting_info,omitempty"`
+	Id *string `json:"id,omitempty"`
 	Ip *string `json:"ip,omitempty"`
 	Ipv4 *string `json:"ipv4,omitempty"`
 	Ipv6 *string `json:"ipv6,omitempty"`

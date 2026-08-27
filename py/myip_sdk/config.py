@@ -37,6 +37,7 @@ def make_config():
         "options": {
           "active": False,
         },
+        "transport": "base",
       },
         },
         "options": {
@@ -70,6 +71,10 @@ def make_config():
             "name": "hosting_info",
             "short": "Live hosting information",
             "type": "`$OBJECT`",
+          },
+          {
+            "name": "id",
+            "type": "`$STRING`",
           },
           {
             "name": "ip",
