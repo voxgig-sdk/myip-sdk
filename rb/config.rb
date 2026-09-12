@@ -98,6 +98,10 @@ module MyipConfig
               "type" => "`$STRING`",
             },
           ],
+          "id" => {
+            "field" => "id",
+            "name" => "id",
+          },
           "name" => "get_ip_info",
           "op" => {
             "load" => {
@@ -120,14 +124,16 @@ module MyipConfig
                   "kind" => "http",
                   "method" => "GET",
                   "orig" => "/{ip}",
-                  "parts" => [
-                    "{id}",
-                  ],
                   "rename" => {
                     "param" => {
                       "ip" => "id",
                     },
                   },
+                  "segments" => [
+                    {
+                      "var" => "id",
+                    },
+                  ],
                   "select" => {
                     "exist" => [
                       "id",
@@ -137,6 +143,9 @@ module MyipConfig
                     "req" => "`reqdata`",
                     "res" => "`body`",
                   },
+                  "parts" => [
+                    "{id}",
+                  ],
                 },
               ],
             },

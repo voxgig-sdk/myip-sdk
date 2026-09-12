@@ -112,6 +112,10 @@ class MyipConfig
               'type' => '`$STRING`',
             ],
           ],
+          'id' => [
+            'field' => 'id',
+            'name' => 'id',
+          ],
           'name' => 'get_ip_info',
           'op' => [
             'load' => [
@@ -134,12 +138,14 @@ class MyipConfig
                   'kind' => 'http',
                   'method' => 'GET',
                   'orig' => '/{ip}',
-                  'parts' => [
-                    '{id}',
-                  ],
                   'rename' => [
                     'param' => [
                       'ip' => 'id',
+                    ],
+                  ],
+                  'segments' => [
+                    [
+                      'var' => 'id',
                     ],
                   ],
                   'select' => [
@@ -150,6 +156,9 @@ class MyipConfig
                   'transform' => [
                     'req' => '`reqdata`',
                     'res' => '`body`',
+                  ],
+                  'parts' => [
+                    '{id}',
                   ],
                 ],
               ],
