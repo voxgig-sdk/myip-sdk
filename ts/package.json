@@ -1,5 +1,5 @@
 {
-  "name": "@voxgig-sdk/myip",
+  "name": "@voxgig-sdk/myip-sdk",
   "version": "0.0.1",
   "description": "Unofficial generated TypeScript SDK for the MyIP public API. Not affiliated with or endorsed by the upstream API provider.",
   "keywords": [
