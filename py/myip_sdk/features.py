@@ -1,12 +1,18 @@
 # Myip SDK feature factory
 
 from myip_sdk.feature.base_feature import MyipBaseFeature
+from myip_sdk.feature.ratelimit_feature import MyipRatelimitFeature
+from myip_sdk.feature.retry_feature import MyipRetryFeature
 from myip_sdk.feature.test_feature import MyipTestFeature
+from myip_sdk.feature.timeout_feature import MyipTimeoutFeature
 
 
 _FEATURES = {
     "base": lambda: MyipBaseFeature(),
+    "ratelimit": lambda: MyipRatelimitFeature(),
+    "retry": lambda: MyipRetryFeature(),
     "test": lambda: MyipTestFeature(),
+    "timeout": lambda: MyipTimeoutFeature(),
 }
 
 

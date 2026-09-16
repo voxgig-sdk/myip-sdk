@@ -4,7 +4,10 @@ declare(strict_types=1);
 // Myip SDK feature factory
 
 require_once __DIR__ . '/feature/BaseFeature.php';
+require_once __DIR__ . '/feature/RatelimitFeature.php';
+require_once __DIR__ . '/feature/RetryFeature.php';
 require_once __DIR__ . '/feature/TestFeature.php';
+require_once __DIR__ . '/feature/TimeoutFeature.php';
 
 
 class MyipFeatures
@@ -14,8 +17,14 @@ class MyipFeatures
         switch ($name) {
             case "base":
                 return new MyipBaseFeature();
+            case "ratelimit":
+                return new MyipRatelimitFeature();
+            case "retry":
+                return new MyipRetryFeature();
             case "test":
                 return new MyipTestFeature();
+            case "timeout":
+                return new MyipTimeoutFeature();
             default:
                 return new MyipBaseFeature();
         }
@@ -31,7 +40,10 @@ class MyipFeatures
     {
         switch ($name) {
             case "base":
+            case "ratelimit":
+            case "retry":
             case "test":
+            case "timeout":
                 return true;
             default:
                 return false;
