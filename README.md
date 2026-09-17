@@ -105,12 +105,12 @@ local result, err = client:GetIpInfo():load({ id = "test01" })
 
 | Language | Package | Install |
 | --- | --- | --- |
-| TypeScript | `@voxgig-sdk/myip-sdk` | publish pending — [install from git tag](https://github.com/voxgig-sdk/myip-sdk/releases) |
-| Python | `voxgig-sdk-myip` | publish pending — [install from git tag](https://github.com/voxgig-sdk/myip-sdk/releases) |
-| PHP | `voxgig-sdk/myip` | publish pending — [install from git tag](https://github.com/voxgig-sdk/myip-sdk/releases) |
+| TypeScript | `@voxgig-sdk/myip-sdk` | publish pending — [install from git tag](https://github.com/voxgig-sdk/myip-sdk/tags) |
+| Python | `voxgig-sdk-myip` | publish pending — [install from git tag](https://github.com/voxgig-sdk/myip-sdk/tags) |
+| PHP | `voxgig-sdk/myip` | publish pending — [install from git tag](https://github.com/voxgig-sdk/myip-sdk/tags) |
 | Golang | `github.com/voxgig-sdk/myip-sdk/go` | `go get github.com/voxgig-sdk/myip-sdk/go@latest` |
-| Ruby | `voxgig-sdk-myip` | publish pending — [install from git tag](https://github.com/voxgig-sdk/myip-sdk/releases) |
-| Lua | `voxgig-sdk-myip` | publish pending — [install from git tag](https://github.com/voxgig-sdk/myip-sdk/releases) |
+| Ruby | `voxgig-sdk-myip` | publish pending — [install from git tag](https://github.com/voxgig-sdk/myip-sdk/tags) |
+| Lua | `voxgig-sdk-myip` | publish pending — [install from git tag](https://github.com/voxgig-sdk/myip-sdk/tags) |
 | Go CLI | `github.com/voxgig-sdk/myip-sdk/go-cli` | `go install github.com/voxgig-sdk/myip-sdk/go-cli/cmd/myip@latest` |
 | Go MCP server | `github.com/voxgig-sdk/myip-sdk/go-mcp` | `go get github.com/voxgig-sdk/myip-sdk/go-mcp@latest` |
 
