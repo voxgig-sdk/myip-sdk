@@ -1,7 +1,7 @@
 // Typed models for the Myip SDK.
 //
-// GENERATED from the API model: main.kit.entity.<e>.fields[] and per-op
-// params (op.<name>.points[].args.params[]). Field/param types come from the
+// GENERATED from the API model: main.kit.entity.<e>.fields{} and per-op
+// params (op.<name>.points[].g.params[]). Field/param types come from the
 // canonical type sentinels via @voxgig/sdkgen canonToType (source of truth:
 // @voxgig/apidef VALID_CANON). Do not edit by hand.
 package entity
@@ -14,17 +14,6 @@ import (
 
 // GetIpInfo is the typed data model for the get_ip_info entity.
 type GetIpInfo struct {
-	Browser *string `json:"browser,omitempty"`
-	Country *string `json:"country,omitempty"`
-	CountryCode *string `json:"country_code,omitempty"`
-	HostingInfo *map[string]any `json:"hosting_info,omitempty"`
-	Id *string `json:"id,omitempty"`
-	Ip *string `json:"ip,omitempty"`
-	Ipv4 *string `json:"ipv4,omitempty"`
-	Ipv6 *string `json:"ipv6,omitempty"`
-	Location *map[string]any `json:"location,omitempty"`
-	Organization *string `json:"organization,omitempty"`
-	Os *string `json:"os,omitempty"`
 }
 
 // GetIpInfoLoadMatch is the typed request payload for GetIpInfo.LoadTyped.

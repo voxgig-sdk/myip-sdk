@@ -91,57 +91,68 @@ func MakeConfig() map[string]any {
 				"fields": []any{
 					map[string]any{
 						"name": "browser",
-						"short": "Detected browser",
+						"title": "Browser",
 						"type": "`$STRING`",
+						"short": "Detected browser",
 					},
 					map[string]any{
 						"name": "country",
-						"short": "Country where the IP is located",
+						"title": "Country",
 						"type": "`$STRING`",
+						"short": "Country where the IP is located",
 					},
 					map[string]any{
 						"name": "country_code",
-						"short": "ISO country code",
+						"title": "Country Code",
 						"type": "`$STRING`",
+						"short": "ISO country code",
 					},
 					map[string]any{
 						"name": "hosting_info",
-						"short": "Live hosting information",
+						"title": "Hosting Info",
 						"type": "`$OBJECT`",
+						"short": "Live hosting information",
 					},
 					map[string]any{
 						"name": "id",
+						"title": "Id",
 						"type": "`$STRING`",
 					},
 					map[string]any{
 						"name": "ip",
-						"short": "The queried IP address",
+						"title": "Ip",
 						"type": "`$STRING`",
+						"short": "The queried IP address",
 					},
 					map[string]any{
 						"name": "ipv4",
-						"short": "IPv4 address",
+						"title": "Ipv4",
 						"type": "`$STRING`",
+						"short": "IPv4 address",
 					},
 					map[string]any{
 						"name": "ipv6",
-						"short": "IPv6 address if available",
+						"title": "Ipv6",
 						"type": "`$STRING`",
+						"short": "IPv6 address if available",
 					},
 					map[string]any{
 						"name": "location",
-						"short": "Geographic location information",
+						"title": "Location",
 						"type": "`$OBJECT`",
+						"short": "Geographic location information",
 					},
 					map[string]any{
 						"name": "organization",
-						"short": "Organization associated with the IP",
+						"title": "Organization",
 						"type": "`$STRING`",
+						"short": "Organization associated with the IP",
 					},
 					map[string]any{
 						"name": "os",
-						"short": "Detected operating system",
+						"title": "Os",
 						"type": "`$STRING`",
+						"short": "Detected operating system",
 					},
 				},
 				"id": map[string]any{
@@ -155,42 +166,42 @@ func MakeConfig() map[string]any {
 						"name": "load",
 						"points": []any{
 							map[string]any{
-								"args": map[string]any{
-									"params": []any{
-										map[string]any{
-											"example": "217.199.217.100",
-											"kind": "param",
-											"name": "id",
-											"orig": "ip",
-											"reqd": true,
-											"type": "`$STRING`",
-										},
-									},
-								},
 								"kind": "http",
 								"method": "GET",
 								"orig": "/{ip}",
-								"rename": map[string]any{
-									"param": map[string]any{
-										"ip": "id",
-									},
-								},
 								"segments": []any{
 									map[string]any{
 										"var": "id",
 									},
 								},
-								"select": map[string]any{
-									"exist": []any{
-										"id",
+								"parts": []any{
+									"{id}",
+								},
+								"rename": map[string]any{
+									"param": map[string]any{
+										"ip": "id",
 									},
 								},
 								"transform": map[string]any{
 									"req": "`reqdata`",
 									"res": "`body`",
 								},
-								"parts": []any{
-									"{id}",
+								"args": map[string]any{
+									"params": []any{
+										map[string]any{
+											"name": "id",
+											"orig": "ip",
+											"type": "`$STRING`",
+											"kind": "param",
+											"reqd": true,
+											"example": "217.199.217.100",
+										},
+									},
+								},
+								"select": map[string]any{
+									"exist": []any{
+										"id",
+									},
 								},
 							},
 						},

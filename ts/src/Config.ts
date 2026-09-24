@@ -16,12 +16,6 @@ const FEATURE_CLASS: Record<string, typeof BaseFeature> = {
 }
 
 
-// Per-feature plugin DEFINITIONS (voxgig/plugin `Definition` values), from
-// the model's active plugin groups. A feature that takes a `plugins` option
-// (secrets over sekreto) reads its own entry; a feature with no plugins has
-// none. Named imports above make each definition statically reachable, so
-// an SDK carries exactly the plugin modules its model selects — the same
-// leanness the old side-effect registry imports bought, without a registry.
 const FEATURE_PLUGINS: Record<string, any[]> = {
   
 }
@@ -32,7 +26,6 @@ class Config {
   makeFeature(this: any, fn: string) {
     const fc = FEATURE_CLASS[fn]
     const fi = new fc()
-    // TODO: errors etc
     return fi
   }
 
@@ -139,57 +132,68 @@ class Config {
       "fields": [
         {
           "name": "browser",
-          "short": "Detected browser",
-          "type": "`$STRING`"
+          "title": "Browser",
+          "type": "`$STRING`",
+          "short": "Detected browser"
         },
         {
           "name": "country",
-          "short": "Country where the IP is located",
-          "type": "`$STRING`"
+          "title": "Country",
+          "type": "`$STRING`",
+          "short": "Country where the IP is located"
         },
         {
           "name": "country_code",
-          "short": "ISO country code",
-          "type": "`$STRING`"
+          "title": "Country Code",
+          "type": "`$STRING`",
+          "short": "ISO country code"
         },
         {
           "name": "hosting_info",
-          "short": "Live hosting information",
-          "type": "`$OBJECT`"
+          "title": "Hosting Info",
+          "type": "`$OBJECT`",
+          "short": "Live hosting information"
         },
         {
           "name": "id",
+          "title": "Id",
           "type": "`$STRING`"
         },
         {
           "name": "ip",
-          "short": "The queried IP address",
-          "type": "`$STRING`"
+          "title": "Ip",
+          "type": "`$STRING`",
+          "short": "The queried IP address"
         },
         {
           "name": "ipv4",
-          "short": "IPv4 address",
-          "type": "`$STRING`"
+          "title": "Ipv4",
+          "type": "`$STRING`",
+          "short": "IPv4 address"
         },
         {
           "name": "ipv6",
-          "short": "IPv6 address if available",
-          "type": "`$STRING`"
+          "title": "Ipv6",
+          "type": "`$STRING`",
+          "short": "IPv6 address if available"
         },
         {
           "name": "location",
-          "short": "Geographic location information",
-          "type": "`$OBJECT`"
+          "title": "Location",
+          "type": "`$OBJECT`",
+          "short": "Geographic location information"
         },
         {
           "name": "organization",
-          "short": "Organization associated with the IP",
-          "type": "`$STRING`"
+          "title": "Organization",
+          "type": "`$STRING`",
+          "short": "Organization associated with the IP"
         },
         {
           "name": "os",
-          "short": "Detected operating system",
-          "type": "`$STRING`"
+          "title": "Os",
+          "type": "`$STRING`",
+          "short": "Detected operating system"
         }
       ],
       "id": {
@@ -203,43 +207,43 @@ class Config {
           "name": "load",
           "points": [
             {
-              "args": {
-                "params": [
-                  {
-                    "example": "217.199.217.100",
-                    "kind": "param",
-                    "name": "id",
-                    "orig": "ip",
-                    "reqd": true,
-                    "type": "`$STRING`"
-                  }
-                ]
-              },
               "kind": "http",
               "method": "GET",
               "orig": "/{ip}",
-              "rename": {
-                "param": {
-                  "ip": "id"
-                }
-              },
               "segments": [
                 {
                   "var": "id"
                 }
               ],
-              "select": {
-                "exist": [
-                  "id"
-                ]
+              "parts": [
+                "{id}"
+              ],
+              "rename": {
+                "param": {
+                  "ip": "id"
+                }
               },
               "transform": {
                 "req": "`reqdata`",
                 "res": "`body`"
               },
-              "parts": [
-                "{id}"
-              ]
+              "args": {
+                "params": [
+                  {
+                    "name": "id",
+                    "orig": "ip",
+                    "type": "`$STRING`",
+                    "kind": "param",
+                    "reqd": true,
+                    "example": "217.199.217.100"
+                  }
+                ]
+              },
+              "select": {
+                "exist": [
+                  "id"
+                ]
+              }
             }
           ]
         }

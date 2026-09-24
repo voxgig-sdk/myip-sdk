@@ -1,0 +1,142 @@
+# Entity: get_ip_info
+
+main: kit: entity: get_ip_info: {
+
+  alias: field: {}
+
+  fields: {
+    browser: {
+      h: "Browser"
+      n: "browser"
+      r: false
+      sh: "Detected browser"
+      t: "`$STRING`"
+    }
+    country: {
+      h: "Country"
+      n: "country"
+      r: false
+      sh: "Country where the IP is located"
+      t: "`$STRING`"
+    }
+    country_code: {
+      h: "Country Code"
+      n: "country_code"
+      r: false
+      sh: "ISO country code"
+      t: "`$STRING`"
+    }
+    hosting_info: {
+      h: "Hosting Info"
+      n: "hosting_info"
+      r: false
+      sh: "Live hosting information"
+      t: "`$OBJECT`"
+    }
+    id: {
+      h: "Id"
+      n: "id"
+      r: false
+      t: "`$STRING`"
+    }
+    ip: {
+      h: "Ip"
+      n: "ip"
+      r: false
+      sh: "The queried IP address"
+      t: "`$STRING`"
+    }
+    ipv4: {
+      h: "Ipv4"
+      n: "ipv4"
+      r: false
+      sh: "IPv4 address"
+      t: "`$STRING`"
+    }
+    ipv6: {
+      h: "Ipv6"
+      n: "ipv6"
+      r: false
+      sh: "IPv6 address if available"
+      t: "`$STRING`"
+    }
+    location: {
+      h: "Location"
+      n: "location"
+      r: false
+      sh: "Geographic location information"
+      t: "`$OBJECT`"
+    }
+    organization: {
+      h: "Organization"
+      n: "organization"
+      r: false
+      sh: "Organization associated with the IP"
+      t: "`$STRING`"
+    }
+    os: {
+      h: "Os"
+      n: "os"
+      r: false
+      sh: "Detected operating system"
+      t: "`$STRING`"
+    }
+  }
+
+  id: {
+    field: "id"
+    name: "id"
+  }
+
+  name: "get_ip_info"
+  op: {
+    load: {
+      name: "load"
+      points: [
+        {
+          co: {
+            id: "GET /{ip}"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                ex: "217.199.217.100"
+                k: "param"
+                n: "id"
+                or: "ip"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/{ip}"
+          q: {
+            exist: [
+              "id"
+            ]
+          }
+          r: {
+            param: {
+              ip: "id"
+            }
+          }
+          s: [
+            {
+              var: "id"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

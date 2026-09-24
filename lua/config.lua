@@ -87,57 +87,68 @@ local function make_config()
         ["fields"] = {
           {
             ["name"] = "browser",
-            ["short"] = "Detected browser",
+            ["title"] = "Browser",
             ["type"] = "`$STRING`",
+            ["short"] = "Detected browser",
           },
           {
             ["name"] = "country",
-            ["short"] = "Country where the IP is located",
+            ["title"] = "Country",
             ["type"] = "`$STRING`",
+            ["short"] = "Country where the IP is located",
           },
           {
             ["name"] = "country_code",
-            ["short"] = "ISO country code",
+            ["title"] = "Country Code",
             ["type"] = "`$STRING`",
+            ["short"] = "ISO country code",
           },
           {
             ["name"] = "hosting_info",
-            ["short"] = "Live hosting information",
+            ["title"] = "Hosting Info",
             ["type"] = "`$OBJECT`",
+            ["short"] = "Live hosting information",
           },
           {
             ["name"] = "id",
+            ["title"] = "Id",
             ["type"] = "`$STRING`",
           },
           {
             ["name"] = "ip",
-            ["short"] = "The queried IP address",
+            ["title"] = "Ip",
             ["type"] = "`$STRING`",
+            ["short"] = "The queried IP address",
           },
           {
             ["name"] = "ipv4",
-            ["short"] = "IPv4 address",
+            ["title"] = "Ipv4",
             ["type"] = "`$STRING`",
+            ["short"] = "IPv4 address",
           },
           {
             ["name"] = "ipv6",
-            ["short"] = "IPv6 address if available",
+            ["title"] = "Ipv6",
             ["type"] = "`$STRING`",
+            ["short"] = "IPv6 address if available",
           },
           {
             ["name"] = "location",
-            ["short"] = "Geographic location information",
+            ["title"] = "Location",
             ["type"] = "`$OBJECT`",
+            ["short"] = "Geographic location information",
           },
           {
             ["name"] = "organization",
-            ["short"] = "Organization associated with the IP",
+            ["title"] = "Organization",
             ["type"] = "`$STRING`",
+            ["short"] = "Organization associated with the IP",
           },
           {
             ["name"] = "os",
-            ["short"] = "Detected operating system",
+            ["title"] = "Os",
             ["type"] = "`$STRING`",
+            ["short"] = "Detected operating system",
           },
         },
         ["id"] = {
@@ -151,42 +162,42 @@ local function make_config()
             ["name"] = "load",
             ["points"] = {
               {
-                ["args"] = {
-                  ["params"] = {
-                    {
-                      ["example"] = "217.199.217.100",
-                      ["kind"] = "param",
-                      ["name"] = "id",
-                      ["orig"] = "ip",
-                      ["reqd"] = true,
-                      ["type"] = "`$STRING`",
-                    },
-                  },
-                },
                 ["kind"] = "http",
                 ["method"] = "GET",
                 ["orig"] = "/{ip}",
-                ["rename"] = {
-                  ["param"] = {
-                    ["ip"] = "id",
-                  },
-                },
                 ["segments"] = {
                   {
                     ["var"] = "id",
                   },
                 },
-                ["select"] = {
-                  ["exist"] = {
-                    "id",
+                ["parts"] = {
+                  "{id}",
+                },
+                ["rename"] = {
+                  ["param"] = {
+                    ["ip"] = "id",
                   },
                 },
                 ["transform"] = {
                   ["req"] = "`reqdata`",
                   ["res"] = "`body`",
                 },
-                ["parts"] = {
-                  "{id}",
+                ["args"] = {
+                  ["params"] = {
+                    {
+                      ["name"] = "id",
+                      ["orig"] = "ip",
+                      ["type"] = "`$STRING`",
+                      ["kind"] = "param",
+                      ["reqd"] = true,
+                      ["example"] = "217.199.217.100",
+                    },
+                  },
+                },
+                ["select"] = {
+                  ["exist"] = {
+                    "id",
+                  },
                 },
               },
             },
